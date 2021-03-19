@@ -18,10 +18,9 @@
         
     </head>
 
-    <body class="">
+    <body class="" style="background-image:url({{asset('backend/assets/img/login.jpg')}}); background-overlay: background-size: cover; background-position: top center; align-items: center;">
         <div class="wrapper ">
-            @yield('title')
-            
+            @yield('content')    
         </div>
         
         <!--   Core JS Files   -->

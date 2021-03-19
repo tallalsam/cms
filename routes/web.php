@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('backend.admin.auth.login');
+    return view('backend.admin.auth.passwords.reset');
 });

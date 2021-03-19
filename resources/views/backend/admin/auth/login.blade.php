@@ -1,5 +1,5 @@
 @extends('backend.admin.layout.auth')
-@section('title')
+@section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
     <div class="col-md-9 ml-auto mr-auto mb-3 text-center">
@@ -72,11 +72,11 @@
       </form>
       <div class="row">
         <div class="col-6">
-            @if (Route::has('password.request'))
+            {{-- @if (Route::has('password.request')) --}}
                 <a href="" class="text-light">
                     <small>{{ __('Forgot password?') }}</small>
                 </a>
-            @endif
+            {{-- @endif --}}
         </div>
         <div class="col-6 text-right">
             <a href="" class="text-light">
