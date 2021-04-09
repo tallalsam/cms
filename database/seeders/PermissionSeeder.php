@@ -28,17 +28,15 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'Delete Permission']);
         Permission::create(['name' => 'Update Permission']);
 
-
         $role1 = Role::create(['name' => 'Super-Admin']);
 
-
-        $user = \App\Models\User::factory()->create([
-                                    'first_name' => 'Super', 
-                                    'last_name' => 'Admin',
-                                    'username'=>'superadmin',
-                                    'email'=>'admin@admin.com',
-                                    'password'=> Hash::make('superadmin')
-        ]);
+        $user = new \App\Models\User;
+                    $user->first_name= 'Super';
+                    $user->last_name = 'Admin';
+                    $user->username = 'superadmin';
+                    $user->email = 'admin@admin.com';
+                    $user->password = Hash::make('superadmin');
+        $user->save();
 
         $user->assignRole($role1);
     }
