@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'b68c7ba0293b975b4381904de7f7c326888ee9ea',
+    'reference' => 'b0fdff7fdee367c18ff1ed48c41895d4a2a705af',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -463,6 +463,15 @@ private static $installed = array (
         0 => 'v8.33.1',
       ),
     ),
+    'inertiajs/inertia-laravel' => 
+    array (
+      'pretty_version' => 'v0.4.1',
+      'version' => '0.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '96c60a7f01ac1032e3dd974b465b8ded41b299dc',
+    ),
     'jaybizzle/crawler-detect' => 
     array (
       'pretty_version' => 'v1.2.105',
@@ -522,7 +531,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'b68c7ba0293b975b4381904de7f7c326888ee9ea',
+      'reference' => 'b0fdff7fdee367c18ff1ed48c41895d4a2a705af',
     ),
     'laravel/sail' => 
     array (

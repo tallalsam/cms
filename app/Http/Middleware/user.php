@@ -16,14 +16,7 @@ class user
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-    {
-        if(Auth::guard('admin')->check())
-        {
-            return $next($request);
-        }
-        else{
-            return redirect('/');
-        }
-        
+    {       
+        return $next($request); 
     }
 }
