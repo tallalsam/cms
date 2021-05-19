@@ -21,6 +21,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        
     ];
 
     /**
@@ -43,6 +44,15 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'user' => [
+                    \App\Http\Middleware\user::class,
+                    \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+                    \Illuminate\Session\Middleware\StartSession::class,
+                    \App\Http\Middleware\VerifyCsrfToken::class,
+                    \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ],
+
     ];
 
     /**

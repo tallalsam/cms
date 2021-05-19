@@ -1,4 +1,4 @@
-@extends('backend.admin.layout.auth')
+@extends('backend.user.layout.auth')
 @section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
@@ -79,7 +79,7 @@
             {{-- @endif --}}
         </div>
         <div class="col-6 text-right">
-            <a href="" class="text-light">
+            <a href="{{route('register')}}" class="text-light">
                 <small>{{ __('Create new account') }}</small>
             </a>
         </div>

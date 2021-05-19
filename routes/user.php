@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user', function () {
-    return view('frontend.welcome');
+Route::prefix('admin')->group(function () {
+
+
+    Route::get('/', function () {
+        return view('backend.user.auth.login');
+    })->name('login');
+
+    Route::get('/register', function () {
+        return view('backend.user.auth.register');
+    })->name('register');
+    
 });
+
+

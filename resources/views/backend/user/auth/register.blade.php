@@ -1,4 +1,4 @@
-@extends('backend.admin.layout.auth')
+@extends('backend.user.layout.auth')
 @section('content')
 <div class="container" style="height: auto;">
     <div class="row align-items-center">
