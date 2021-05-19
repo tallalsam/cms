@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('admin')->group(function () {
-
-
-    Route::get('/', function () {
+    
+    Route::get('/login', function () {
         return view('backend.user.auth.login');
     })->name('login');
 
@@ -25,5 +24,3 @@ Route::prefix('admin')->group(function () {
     })->name('register');
     
 });
-
-
