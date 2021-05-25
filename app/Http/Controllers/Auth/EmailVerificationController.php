@@ -28,6 +28,6 @@ class EmailVerificationController extends Controller
     {
         $request->fulfill();
 
-        return redirect()->to('/login'); // <-- change this to whatever you want
+        return redirect()->to('admin/dashboard'); // <-- change this to whatever you want
     }
 }

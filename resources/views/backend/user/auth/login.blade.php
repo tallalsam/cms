@@ -84,6 +84,9 @@
             </a>
         </div>
       </div>
+
+      @include('backend.user.partials.errors');
+      
     </div>
   </div>
 </div>

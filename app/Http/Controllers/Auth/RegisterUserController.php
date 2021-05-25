@@ -33,17 +33,9 @@ class RegisterUserController extends Controller
         $user = new User($params);
         $user->save();
 
-
         event(new Registered($user));
 
-        // return view('backend.user.auth.verifyEmail');
+        return view('backend.user.auth.login');
 
-    
-    }
-
-    public function handle()
-    {
-        //
-    }
-        
+    } 
 }

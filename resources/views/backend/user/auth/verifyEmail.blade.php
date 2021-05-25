@@ -18,9 +18,9 @@
                   
                   {{ __('Before proceeding, please check your email for a verification link.') }}
                   
-                  @if (Route::has('verification.resend'))
+                  @if (Route::has('verification.request'))
                       {{ __('If you did not receive the email') }},  
-                      <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
+                      <form class="d-inline" method="POST" action="{{ route('verification.request') }}">
                           @csrf
                           <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
                       </form>
@@ -28,6 +28,12 @@
                 </p>
               </div>
             </div>
+
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
+            @endif
         </div>
     </div>
   </div>
