@@ -37,6 +37,14 @@ Route::prefix('admin')->group(function ()
         ->name('verification.verify'); // <-- don't change the route name
 
 
+    Route::get('/register', function () {
+        return view('backend.user.auth.password.email');
+    })->name('register');
+
+    Route::post('reset_password_without_token', 'AccountsController@validatePasswordRequest');
+    Route::post('reset_password_with_token', 'AccountsController@resetPassword');
+
+
     
     Route::get('/login', function () {
         return view('backend.user.auth.login');

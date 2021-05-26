@@ -72,7 +72,7 @@
       </form>
       <div class="row">
         <div class="col-6">
-            {{-- @if (Route::has('password.request')) --}}
+            @if (Route::has('password.request'))
                 <a href="" class="text-light">
                     <small>{{ __('Forgot password?') }}</small>
                 </a>

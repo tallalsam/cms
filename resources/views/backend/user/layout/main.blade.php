@@ -20,11 +20,11 @@
 
     <body class="">
         <div class="wrapper ">
-            @include('backend.partials.sidebar')
+            @include('backend.user.partials.sidebar')
             <div class="main-panel">
-                @include('backend.partials.header')
+                @include('backend.user.partials.header')
                 @yield('content')
-                @include('backend.partials.footer')
+                @include('backend.user.partials.footer')
             </div>
         </div>
         
