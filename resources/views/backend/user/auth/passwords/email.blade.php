@@ -1,9 +1,9 @@
-@extends('backend.admin.layout.auth')
+@extends('backend.user.layout.auth')
 @section('content')
 <div class="container" style="height: auto;">
     <div class="row align-items-center">
       <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
-        <form class="form" method="POST" action="">
+        <form class="form" method="POST" action="{{url('/admin/reset_password_without_token')}}">
           @csrf
   
           <div class="card card-login card-hidden mb-3">
@@ -15,9 +15,9 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="alert alert-success">
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <i class="material-icons">close</i>
-                      </button>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <i class="material-icons">close</i>
+                        </button>
                       <span>{{ session('status') }}</span>
                     </div>
                   </div>

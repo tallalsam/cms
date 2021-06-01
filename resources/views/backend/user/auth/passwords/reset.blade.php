@@ -1,12 +1,12 @@
-@extends('backend.admin.layout.auth')
+@extends('backend.user.layout.auth')
 @section('content')
 <div class="container" style="height: auto;">
     <div class="row align-items-center">
       <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
-        <form class="form" method="POST" action="">
+        <form class="form" method="POST" action="{{route('reset_password_with_token')}}">
           @csrf
   
-          <input type="hidden" name="token" value="">
+          <input type="hidden" name="token" value=" {{ $request->route('token') }} ">
           <div class="card card-login card-hidden mb-3">
             <div class="card-header card-header-primary text-center">
               <h4 class="card-title"><strong>{{ __('Reset Password') }}</strong></h4>
@@ -63,6 +63,8 @@
             </div>
           </div>
         </form>
+
+        @include('backend.user.partials.errors');
       </div>
     </div>
   </div>

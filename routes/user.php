@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\RegisterUserController;
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LoginUserController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,8 +42,19 @@ Route::prefix('admin')->group(function ()
         return view('backend.user.auth.password.email');
     })->name('register');
 
-    Route::post('reset_password_without_token', 'AccountsController@validatePasswordRequest');
-    Route::post('reset_password_with_token', 'AccountsController@resetPassword');
+
+
+
+    Route::get('/reset_password' , function() {
+        return view('backend.user.auth.passwords.email');
+    })->name('reset_password');
+
+    Route::post('reset_password_without_token', [ResetPasswordController::class , 'validatePasswordRequest']);
+
+    Route::get('password/reset/{token}/{email}', [ResetPasswordController::class , 'showResetForm'])
+    ->name('password.reset');
+
+    Route::post('reset_password_with_token', [ResetPasswordController::class, 'resetPassword'])->name('reset_password_with_token');
 
 
     
