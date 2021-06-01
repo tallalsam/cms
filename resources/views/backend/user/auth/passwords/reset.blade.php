@@ -6,7 +6,7 @@
         <form class="form" method="POST" action="{{route('reset_password_with_token')}}">
           @csrf
   
-          <input type="hidden" name="token" value=" {{ $request->route('token') }} ">
+          <input type="hidden" name="token" value=" {{ request()->route('token') }} ">
           <div class="card card-login card-hidden mb-3">
             <div class="card-header card-header-primary text-center">
               <h4 class="card-title"><strong>{{ __('Reset Password') }}</strong></h4>
