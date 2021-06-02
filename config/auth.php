@@ -17,7 +17,7 @@ return [
         'guard' => 'admin',
         'passwords' => 'users',
     ],
-
+ 
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
