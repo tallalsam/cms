@@ -57,7 +57,12 @@ class ResetPasswordController extends Controller
             //Here send the link with CURL with an external email API 
             // $user->sendPasswordResetNotification($token);
 
-            \Password::broker()->sendResetLink(['email' => $email]);
+           $status = \Password::broker()->sendResetLink(['email' => $email]);
+
+           return $status === Password::RESET_LINK_SENT
+                ? back()->with(['status' => __($status)])
+                : back()->withErrors(['email' => __($status)]);
+                })->middleware('guest')->name('password.email');
 
             // flash('Reset password link sent', 'success');
             // return redirect()->route('admin.users.show', $user);
